@@ -1,0 +1,85 @@
+header{
+    height: 483px;
+    background-color: #e6001f;
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+}
+.nav
+{
+    background: black;
+    height: 85px;
+    margin-top: -145px;
+/*    position: absolute;*/
+
+
+}
+.txt{
+    font-family: Calibri;
+    font-size: 16pt;
+    color: rgba(255, 255, 255, 255);
+    text-align: center;
+}
+
+.txt2{
+    font-family: Calibri;
+    font-size: 16pt;
+    color: rgba(0, 0, 0, 255);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0%;
+    height: 100px;
+
+/*    min-height: 100px;*/
+/*    background: whigt;*/
+}
+.title{
+    font-family: Calibri;
+    font-size: 30pt;
+    color: rgba(0, 0, 0, 255);
+    text-align: left;
+    text-transform: uppercase;
+
+}
+.title-small{
+    font-family: Calibri;
+    font-size: 30pt;
+    color: rgba(0, 0, 0, 255);
+    text-align: left;
+    margin-left:1%;
+    width: 100%
+}
+.content{
+    font-family: Calibri;
+    font-size: 16pt;
+    color: rgba(149, 149, 149, 255);
+    text-align: left;
+}
+.more
+{
+    font-family: Calibri;
+    font-size: 18pt;
+    color: rgba(230, 0, 31, 255);
+    text-align: left;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer1{
+    font-size: 18pt;
+    color: rgb(255,255,255);
+    font-family: "Calibri";
+    text-align: left;
+}
+.footer2{
+    opacity: 0.6;
+}
+
+.red-txt
+{
+    color: #e6001f;
+}
