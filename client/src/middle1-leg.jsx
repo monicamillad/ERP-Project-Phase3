@@ -4,12 +4,12 @@ import "./style.css" ;
 class Middle1 extends Component {
 
   state = {
-    response: ''
+    content: ''
   };
 
   componentDidMount() {
     this.callApi()
-  .then(res => this.setState({ response: res.express }))
+  .then(res => this.setState({ content: res.c1 }))
       .catch(err => console.log(err));
   }
 
@@ -37,7 +37,7 @@ class Middle1 extends Component {
       >
         <div className="title">Legislation and Privacy</div>
         <br />
-        <p className="content">{this.state.response}</p>
+        <p className="content">{this.state.content}</p>
       </div>
     );
   }

@@ -27,7 +27,7 @@ class App extends Component
                 <Route path="/WWA/challenges" exact strict component={Challenges} />
                 <Route path="/WWA/FAQs" exact strict component={FAQ} />
                 <Route path="/WWD/landing" exact strict component={Landing} />
-                <Route path="/WWA/legislations" exact strict component={Legislations} />
+                <Route path="/WWD/legislations" exact strict component={Legislations} />
                 <Route path="/WWA/organisation" exact strict component={Organisation} />
             </div>
             </Router>

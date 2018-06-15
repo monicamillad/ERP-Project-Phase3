@@ -4,6 +4,32 @@ import "./style.css" ;
 import dash from './images/dash.png' ;
 
 class Middle2 extends Component {
+
+  state = {
+    c2: '',
+    c3: '',
+    c4: '',
+    c5: '',
+    c6: '',
+    c7: '',
+    c8: ''
+  };
+
+  componentDidMount() {
+    this.callApi()
+  .then(res => this.setState({ c2: res.c2 , c3: res.c3 , c4: res.c4 , c5: res.c5 , c6: res.c6 , c7: res.c7 , c8: res.c8 }))
+      .catch(err => console.log(err));
+  }
+
+  callApi = async () => {
+    const response = await fetch('/api/middle2-content');
+    const body = await response.json();
+
+    if (response.status !== 200) throw Error(body.message);
+
+    return body;
+  };
+
   render() {
     return (
       <div
@@ -30,11 +56,9 @@ class Middle2 extends Component {
             }}
           />
           <h className="red-txt">
-            The Intelligence Services Act 2001 ('the Act')
+            {this.state.c2}
           </h>{" "}
-          provides the legislative basis for the work of ASIS, DIGO and ASD. The
-          legislation stipulates the functions of the agencies, including what
-          the agencies may, and may not, do.
+          {this.state.c3}
         </p>
         <p
           className="content"
@@ -50,11 +74,9 @@ class Middle2 extends Component {
           />
           Under{" "}
           <h className="red-txt">
-            the Act, the Parliamentary Joint Committee on Intelligence and
-            Security (PJCIS)
+            {this.state.c4}
           </h>{" "}
-          has responsibility for the review of ASIS’s expenditure and
-          administration.
+          {this.state.c5}
         </p>
         <p
           className="content"
@@ -68,10 +90,7 @@ class Middle2 extends Component {
               marginRight: "3%"
             }}
           />
-          The Act also specifies rules to protect the privacy of Australian
-          citizens. These Rules were made in accordance with the Act and
-          regulate ASIS handling of intelligence information concerning
-          Australian persons.
+          {this.state.c6}
         </p>
         <p
           className="content"
@@ -87,15 +106,9 @@ class Middle2 extends Component {
           />
           Additionally,{" "}
           <h className="red-txt">
-            the Inspector-General of Intelligence and Security Act 1996 created
-            the role of the Inspector-General of Intelligence and Security
-            (IGIS).
+            {this.state.c7}
           </h>{" "}
-          The IGIS is an independent statutory office-holder who is empowered to
-          investigate complaints made against ASIS, to review the compliance of
-          ASIS with the laws of the Commonwealth, States and Territories, and
-          conduct inquiries into matters which fall within the prescribed
-          functions of that office.
+          {this.state.c8}
         </p>
       </div>
     );
